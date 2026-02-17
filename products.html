@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - SwiftCart</title>
+    <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -386,30 +387,93 @@
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-[#1a1a2e] mt-16">
-        <div class="max-w-11/12 mx-auto px-4 sm:px-6 py-10">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                <h2 class="brand text-xl font-bold brand-gradient">SwiftCart</h2>
-                <div class="flex gap-3">
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
-                            class="fab fa-facebook-f text-sm"></i></a>
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
-                            class="fab fa-twitter text-sm"></i></a>
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
-                            class="fab fa-instagram text-sm"></i></a>
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
-                            class="fab fa-linkedin-in text-sm"></i></a>
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
-                            class="fa-solid fa-envelope text-sm"></i></a>
+    <footer class="bg-[#1a1a2e]" id="contact">
+        <!-- Newsletter -->
+        <div class="border-b border-white/10">
+            <div class="max-w-11/12 mx-auto  px-4 sm:px-6 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-400 leading-relaxed">The latest news, articles, and resources, sent to your
+                            inbox weekly.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email"
+                            class="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-400 transition-colors" />
+                        <button onclick="subscribeNewsletter()"
+                            class="btn btn-primary px-8 py-3 rounded-full text-white font-semibold whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-white/10 mt-6 pt-6 text-center">
+        </div>
+    
+        <!-- Links -->
+        <div class="max-w-11/12 mx-auto  px-4 sm:px-6 py-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <h2 class="brand text-2xl font-bold brand-gradient mb-4">SwiftCart</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">Your one-stop shop for all your fashion and
+                        lifestyle
+                        needs. Quality products, fast delivery, and excellent support.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-widest">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Home</a></li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">About</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-widest">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">FAQ</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Shipping</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Returns</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-widest">Subscribe to Our
+                        Newsletter
+                    </h4>
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all"><i
+                                class="fa-solid fa-envelope text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 text-sm">© 2025 SwiftCart, Inc. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-400 text-sm transition-colors">Cookies</a>
+                </div>
             </div>
         </div>
     </footer>
